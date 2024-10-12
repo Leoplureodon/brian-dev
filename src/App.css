@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100svh;
   background: linear-gradient(
     to bottom right,
     var(--deep-blue),
@@ -34,24 +34,6 @@ body {
   );
   color: var(--white);
   text-align: center;
-}
-
-.see-more {
-  padding: 10px 20px;
-  color: var(--main-blue);
-  border: 1px solid var(--main-blue);
-  background: transparent;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  position: absolute;
-  bottom: 20px; /* Positioned at the bottom of the .intro section */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.see-more:hover {
-  background: var(--main-blue); /* Change background on hover */
-  color: var(--white); /* Change text color on hover */
 }
 
 /* Ensure the following sections have enough height to enable scrolling */

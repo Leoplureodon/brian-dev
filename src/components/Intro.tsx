@@ -12,16 +12,10 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 function Intro() {
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector(".about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const scrollToContact = () => {
-    const aboutSection = document.querySelector(".contact");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "instant" });
+  const scrollToSection = (section: string, behavior: ScrollBehavior) => {
+    const contactSection = document.querySelector("." + section);
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: behavior });
     }
   };
 
@@ -31,7 +25,7 @@ function Intro() {
       spacing={2}
       alignItems="center"
       justifyContent="center"
-      style={{ padding: "20px", textAlign: "center", minHeight: "100vh" }}
+      style={{ padding: "20px", textAlign: "center", minHeight: "70vh" }}
     >
       {/* Avatar section */}
       <Grid
@@ -41,11 +35,12 @@ function Intro() {
         style={{
           display: "flex",
           justifyContent: "center",
-          marginBottom: "20px",
+          marginBottom: "10px", // Reduce margin for mobile
         }}
       >
         <Avatar
           src={image}
+          alt="Portrait photo of Brian O'Rourke"
           sx={{
             width: { xs: 150, sm: 300 }, // Responsive sizing
             height: { xs: 150, sm: 300 },
@@ -58,7 +53,7 @@ function Intro() {
         <Typography
           variant="h1"
           sx={{
-            marginBottom: "10px",
+            marginBottom: { xs: "5px", sm: "10px" }, // Adjust for mobile
             fontSize: { xs: "2rem", sm: "3rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
@@ -68,7 +63,7 @@ function Intro() {
         <Typography
           variant="h3"
           sx={{
-            marginBottom: "10px",
+            marginBottom: { xs: "5px", sm: "10px" }, // Adjust for mobile
             fontSize: { xs: "1.5rem", sm: "2rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
@@ -78,7 +73,7 @@ function Intro() {
         <Typography
           variant="h4"
           sx={{
-            marginBottom: "20px",
+            marginBottom: { xs: "15px", sm: "20px" }, // Adjust for mobile
             fontSize: { xs: "1.25rem", sm: "1.5rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
@@ -131,7 +126,7 @@ function Intro() {
           </Tooltip>
           <Tooltip title="Contact Me" arrow>
             <Button
-              onClick={scrollToContact}
+              onClick={() => scrollToSection("contact", "instant")}
               variant="outlined"
               color="primary"
             >
@@ -142,12 +137,15 @@ function Intro() {
         <Button
           style={{
             position: "absolute",
-            bottom: "20px", // Keeps it at the bottom of the page
+            bottom: "50px", // Keeps it at the bottom of the page
             left: "50%",
             transform: "translateX(-50%)", // Center the button horizontally
+            color: "white", // Set the text color to white
+            backgroundColor: "transparent", // Make the background transparent
+            border: "1px solid white", // Add a white border
           }}
           className="see-more"
-          onClick={scrollToAbout}
+          onClick={() => scrollToSection("about", "smooth")}
         >
           See More
         </Button>

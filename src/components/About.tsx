@@ -4,29 +4,22 @@ function About() {
   return (
     <>
       <Typography>
-        I'm a developer with extensive experience in web development, game
-        design, and creating interactive digital experiences. Throughout my
-        career, I have had the privilege of working on a diverse range of
-        projects, from small, independent ventures where I served as the sole
-        developer, to large-scale international collaborations as part of
-        multidisciplinary teams. My ability to adapt to different project
-        environments, whether working independently or within global teams, has
-        enabled me to deliver high-quality solutions consistently.
+        I’m a developer with experience in web, game design, and interactive
+        digital projects. I’ve worked on small independent ventures as the sole
+        developer, and large international collaborations, delivering
+        high-quality solutions in both.
       </Typography>
       <br />
       <Typography>
-        I'm passionate about pushing the boundaries of technology to create
-        immersive, user-centered experiences. My work spans a variety of
-        industries, including entertainment, technology, and business, and I
-        thrive on the challenges that come with developing innovative solutions.
-        Whether it’s optimizing web applications, building games that engage
-        users on a deeper level, or crafting seamless interactive interfaces, I
-        am driven by a desire to turn creative ideas into reality.
+        I’m passionate about pushing technology's limits to create immersive
+        user experiences. My work spans entertainment, tech, and business, from
+        optimizing web apps to building engaging games and interactive
+        interfaces.
       </Typography>
       <br />
       <Typography>
-        When not working I enjoy video games, home automation, finding things to
-        3d print, and some occasional matches of Magic The Gathering.
+        Outside of work, I enjoy video games, home automation, 3D printing, and
+        the occasional Magic: The Gathering match.
       </Typography>
     </>
   );

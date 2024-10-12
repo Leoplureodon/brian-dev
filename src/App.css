@@ -7,6 +7,7 @@
   --white: #ffffff; /* Light background */
   --dark-gray: #121212; /* Dark background */
   --light-gray: #f5f5f5; /* Light text */
+  --accent-green: #4caf50;
 }
 
 html,
@@ -18,30 +19,34 @@ body {
 }
 
 .intro {
+  position: relative; /* Make .see-more button relative to this section */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   background: linear-gradient(
     to bottom right,
     var(--deep-blue),
     var(--main-blue),
     var(--light-blue),
     var(--sky-blue)
-  ); /* Updated gradient background */
-  color: var(--white); /* Text color for better contrast */
-  text-align: center; /* Center the text */
+  );
+  color: var(--white);
+  text-align: center;
 }
 
 .see-more {
-  margin-top: 20px; /* Space above the button */
-  padding: 10px 20px; /* Padding around the button */
+  padding: 10px 20px;
   color: var(--main-blue);
   border: 1px solid var(--main-blue);
-  background: transparent; /* Transparent background */
-  cursor: pointer; /* Pointer on hover */
-  transition: background 0.3s, color 0.3s; /* Smooth transition */
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  position: absolute;
+  bottom: 20px; /* Positioned at the bottom of the .intro section */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .see-more:hover {
@@ -60,4 +65,30 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    min-height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for smaller screens */
+    overflow: hidden; /* Prevent content from spilling out */
+  }
+
+  .intro h2 {
+    font-size: 1.5rem; /* Adjust heading font size for mobile */
+  }
+
+  .see-more {
+    bottom: 15px; /* Adjust the bottom position for smaller screens */
+    padding: 8px 16px; /* Adjust padding for mobile */
+  }
+
+  /* Ensure the following sections adjust appropriately on mobile */
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    min-height: auto; /* Allow sections to fit their content */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
 }

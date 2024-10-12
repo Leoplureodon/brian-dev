@@ -1,7 +1,4 @@
-// Functionality
-import { Grid, Paper, Tooltip, Typography } from "@mui/material";
-
-// Icons
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import {
   FaReact,
   FaHtml5,
@@ -97,11 +94,18 @@ function Skills() {
             {groupedSkills[skillType as SkillType].map((skill, index) => (
               <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
                 <div style={{ textAlign: "center" }}>
-                  <Tooltip title={skill.name}>
-                    <div style={{ fontSize: 40 }}>
-                      {skill.icon ? skill.icon : "N/A"}
-                    </div>
-                  </Tooltip>
+                  <Box
+                    style={{ fontSize: 40 }}
+                    sx={{
+                      fontSize: 40,
+                      transition: "transform 0.3s ease",
+                      "&:hover": {
+                        transform: "scale(1.3)",
+                      },
+                    }}
+                  >
+                    {skill.icon ? skill.icon : "N/A"}
+                  </Box>
                   <Typography variant="body1">{skill.name}</Typography>
                 </div>
               </Grid>

@@ -1,6 +1,6 @@
 // Functionality
 import { useState } from "react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 
@@ -40,6 +40,20 @@ function App() {
           ? getCSSVariable("--light-gray")
           : getCSSVariable("--dark-gray"),
       },
+    },
+    typography: {
+      fontFamily: [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        '"Segoe UI"',
+        "Roboto",
+        '"Helvetica Neue"',
+        "Arial",
+        "sans-serif",
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(","),
     },
   });
 

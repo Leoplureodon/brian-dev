@@ -2,6 +2,8 @@ import { Link, TextField, Button, Box, Typography } from "@mui/material";
 import { useState } from "react";
 
 function Contact() {
+  const emailAddress: string = import.meta.env.VITE_EMAIL_ADDRESS;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,7 +24,7 @@ function Contact() {
     <Box>
       <Typography variant="body1" gutterBottom>
         Contact me at{" "}
-        <Link href="mailto:example@example.com">example@example.com</Link>
+        <Link href={`mailto:${emailAddress}`}>{emailAddress}</Link>
         {", "} or feel free to drop me a line using the form below
       </Typography>
 

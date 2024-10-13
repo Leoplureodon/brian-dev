@@ -54,7 +54,7 @@ function Intro() {
           variant="h1"
           sx={{
             marginBottom: { xs: "5px", sm: "10px" }, // Adjust for mobile
-            fontSize: { xs: "5rem", sm: "5rem" },
+            fontSize: { xs: "2rem", sm: "5rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
         >

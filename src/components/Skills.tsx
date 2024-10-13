@@ -96,7 +96,7 @@ function Skills() {
             </Typography>
             <Grid container spacing={2}>
               {groupedSkills[skillType as SkillType].map((skill, index) => (
-                <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
+                <Grid item xs={3} sm={2} md={2} lg={2} key={index}>
                   <div style={{ textAlign: "center" }}>
                     <Box
                       style={{ fontSize: 40 }}

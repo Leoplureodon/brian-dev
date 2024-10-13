@@ -3,6 +3,9 @@ import { Typography } from "@mui/material";
 function About() {
   return (
     <>
+      <Typography variant="h2" gutterBottom>
+        About
+      </Typography>
       <Typography>
         I’m a developer with experience in web, game design, and interactive
         digital projects. I’ve worked on small independent ventures as the sole

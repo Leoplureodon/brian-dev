@@ -77,19 +77,15 @@ function App() {
           </Button> */}
           </Box>
           <Box className="about">
-            <h2>About</h2>
             <About />
           </Box>
           <Box className="skills">
-            <h2>Skills</h2>
             <Skills />
           </Box>
           <Box className="projects">
-            <h2>Projects</h2>
             <Projects />
           </Box>
           <Box className="contact">
-            <h2>Contact</h2>
             <Contact />
           </Box>
         </SnackbarProvider>

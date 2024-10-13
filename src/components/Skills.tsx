@@ -84,36 +84,41 @@ const groupedSkills = mySkills.reduce(
 
 function Skills() {
   return (
-    <Paper style={{ padding: 16 }}>
-      {Object.keys(groupedSkills).map((skillType) => (
-        <div key={skillType}>
-          <Typography variant="h6" style={{ marginBottom: 16 }}>
-            {skillType.charAt(0).toUpperCase() + skillType.slice(1)}
-          </Typography>
-          <Grid container spacing={2}>
-            {groupedSkills[skillType as SkillType].map((skill, index) => (
-              <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
-                <div style={{ textAlign: "center" }}>
-                  <Box
-                    style={{ fontSize: 40 }}
-                    sx={{
-                      fontSize: 40,
-                      transition: "transform 0.3s ease",
-                      "&:hover": {
-                        transform: "scale(1.3)",
-                      },
-                    }}
-                  >
-                    {skill.icon ? skill.icon : "N/A"}
-                  </Box>
-                  <Typography variant="body1">{skill.name}</Typography>
-                </div>
-              </Grid>
-            ))}
-          </Grid>
-        </div>
-      ))}
-    </Paper>
+    <>
+      <Typography variant="h2" gutterBottom>
+        Skills
+      </Typography>
+      <Paper style={{ padding: 16 }}>
+        {Object.keys(groupedSkills).map((skillType) => (
+          <div key={skillType}>
+            <Typography variant="h6" style={{ marginBottom: 16 }}>
+              {skillType.charAt(0).toUpperCase() + skillType.slice(1)}
+            </Typography>
+            <Grid container spacing={2}>
+              {groupedSkills[skillType as SkillType].map((skill, index) => (
+                <Grid item xs={12} sm={6} md={3} lg={2} key={index}>
+                  <div style={{ textAlign: "center" }}>
+                    <Box
+                      style={{ fontSize: 40 }}
+                      sx={{
+                        fontSize: 40,
+                        transition: "transform 0.3s ease",
+                        "&:hover": {
+                          transform: "scale(1.3)",
+                        },
+                      }}
+                    >
+                      {skill.icon ? skill.icon : "N/A"}
+                    </Box>
+                    <Typography variant="body1">{skill.name}</Typography>
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </div>
+        ))}
+      </Paper>
+    </>
   );
 }
 

@@ -67,67 +67,72 @@ function Contact() {
   };
 
   return (
-    <Box sx={{ maxWidth: 800 }} aria-busy={busy}>
-      <Typography variant="body1" gutterBottom>
-        Contact me at{" "}
-        <Link href={`mailto:${emailAddress}`}>{emailAddress}</Link>
-        {", "} or feel free to drop me a line using the form below
+    <>
+      <Typography variant="h2" gutterBottom>
+        Contact
       </Typography>
+      <Box sx={{ maxWidth: 800 }} aria-busy={busy}>
+        <Typography variant="body1" gutterBottom>
+          Contact me at{" "}
+          <Link href={`mailto:${emailAddress}`}>{emailAddress}</Link>
+          {", "} or feel free to drop me a line using the form below
+        </Typography>
 
-      <form onSubmit={handleSubmit}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            maxWidth: 800,
-          }}
-        >
-          <TextField
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            label="Email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            label="Message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            multiline
-            rows={4}
-            required
-          />
-          {/* Hidden botcheck field */}
-          <input
-            type="checkbox"
-            name="botcheck"
-            className="hidden"
-            style={{ display: "none" }}
-          />
-          <Box sx={{ display: "flex" }}>
-            <Button
-              disabled={busy}
-              sx={{ marginRight: 3 }}
-              type="submit"
-              variant="contained"
-            >
-              Submit
-            </Button>
-            {busy && <CircularProgress />}
+        <form onSubmit={handleSubmit}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+              maxWidth: 800,
+            }}
+          >
+            <TextField
+              label="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              label="Email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              label="Message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              multiline
+              rows={4}
+              required
+            />
+            {/* Hidden botcheck field */}
+            <input
+              type="checkbox"
+              name="botcheck"
+              className="hidden"
+              style={{ display: "none" }}
+            />
+            <Box sx={{ display: "flex" }}>
+              <Button
+                disabled={busy}
+                sx={{ marginRight: 3 }}
+                type="submit"
+                variant="contained"
+              >
+                Submit
+              </Button>
+              {busy && <CircularProgress />}
+            </Box>
           </Box>
-        </Box>
-      </form>
-    </Box>
+        </form>
+      </Box>
+    </>
   );
 }
 

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { SnackbarProvider } from "notistack";
 import "./App.css";
 
 // Pages
@@ -12,6 +13,8 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
+  // Toasts
+
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Function to get CSS variable value
@@ -66,28 +69,30 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Box className="intro">
-          <Intro />
-          {/* <Button variant="contained" color="primary" onClick={toggleTheme}>
+        <SnackbarProvider>
+          <Box className="intro">
+            <Intro />
+            {/* <Button variant="contained" color="primary" onClick={toggleTheme}>
             Toggle Theme
           </Button> */}
-        </Box>
-        <Box className="about">
-          <h2>About</h2>
-          <About />
-        </Box>
-        <Box className="skills">
-          <h2>Skills</h2>
-          <Skills />
-        </Box>
-        <Box className="projects">
-          <h2>Projects</h2>
-          <Projects />
-        </Box>
-        <Box className="contact">
-          <h2>Contact</h2>
-          <Contact />
-        </Box>
+          </Box>
+          <Box className="about">
+            <h2>About</h2>
+            <About />
+          </Box>
+          <Box className="skills">
+            <h2>Skills</h2>
+            <Skills />
+          </Box>
+          <Box className="projects">
+            <h2>Projects</h2>
+            <Projects />
+          </Box>
+          <Box className="contact">
+            <h2>Contact</h2>
+            <Contact />
+          </Box>
+        </SnackbarProvider>
       </ThemeProvider>
     </>
   );

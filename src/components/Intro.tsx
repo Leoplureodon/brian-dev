@@ -54,7 +54,7 @@ function Intro() {
           variant="h1"
           sx={{
             marginBottom: { xs: "5px", sm: "10px" }, // Adjust for mobile
-            fontSize: { xs: "2rem", sm: "3rem" },
+            fontSize: { xs: "5rem", sm: "5rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
         >
@@ -74,7 +74,7 @@ function Intro() {
           variant="h4"
           sx={{
             marginBottom: { xs: "15px", sm: "20px" }, // Adjust for mobile
-            fontSize: { xs: "1.25rem", sm: "1.5rem" },
+            fontSize: { xs: "1.2rem", sm: "1.5rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
         >
@@ -88,7 +88,7 @@ function Intro() {
           }}
         >
           Award-winning developer with a passion for creating impactful
-          experiences.
+          experiences
         </Typography>
         <Button
           variant="contained"

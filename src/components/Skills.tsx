@@ -20,7 +20,6 @@ import {
   SiUnrealengine,
   SiVisualstudiocode,
   SiAzuredevops,
-  SiMysql,
   SiCsharp,
   SiJavascript,
   SiPostgresql,
@@ -31,6 +30,7 @@ import {
 import { AiOutlineApi, AiFillPicture } from "react-icons/ai";
 import { MdCloudSync, MdCloudDone } from "react-icons/md";
 import { LiaNode } from "react-icons/lia";
+import { GrMysql } from "react-icons/gr";
 
 type SkillType = "web" | "languages" | "games" | "tools";
 
@@ -63,7 +63,7 @@ const mySkills: Skill[] = [
   { skillType: "tools", name: "Visual Studio", icon: <SiVisualstudiocode /> },
   { skillType: "tools", name: "Azure Dev Ops", icon: <SiAzuredevops /> },
   { skillType: "tools", name: "PostgreSQL", icon: <SiPostgresql /> },
-  { skillType: "tools", name: "MySQL", icon: <SiMysql /> },
+  { skillType: "tools", name: "MySQL", icon: <GrMysql /> },
   { skillType: "tools", name: "Git", icon: <FaGitAlt /> },
   { skillType: "tools", name: "GitHub", icon: <FaGithub /> },
   { skillType: "tools", name: "Bitbucket", icon: <FaBitbucket /> },

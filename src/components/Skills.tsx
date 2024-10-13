@@ -91,7 +91,11 @@ function Skills() {
       <Paper style={{ padding: 16 }}>
         {Object.keys(groupedSkills).map((skillType) => (
           <div key={skillType}>
-            <Typography variant="h6" style={{ marginBottom: 16 }}>
+            <Typography
+              color="#0d47a1"
+              variant="h4"
+              style={{ marginBottom: 16 }}
+            >
               {skillType.charAt(0).toUpperCase() + skillType.slice(1)}
             </Typography>
             <Grid container spacing={2}>

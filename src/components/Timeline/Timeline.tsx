@@ -84,7 +84,7 @@ export default function Timeline() {
                   textAlign: index % 2 === 1 ? "left" : "right", // Text alignment
                 }}
               >
-                {element.date}
+                <Typography variant="h5">{element.date}</Typography>
               </Box>
             </Box>
 
@@ -105,7 +105,7 @@ export default function Timeline() {
             >
               {/* Title */}
               <Box style={{ fontSize: "1.25rem", fontWeight: "500" }}>
-                <Typography variant={"h5"} color="white">
+                <Typography variant={"h5"} color="#3B82F6">
                   {element.title}
                 </Typography>
               </Box>

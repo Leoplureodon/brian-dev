@@ -1,6 +1,7 @@
 import timelineElements from "./timelineElements";
 import schoolIcon from "../../assets/school.svg";
 import workIcon from "../../assets/work.svg";
+import { Box, Typography } from "@mui/material";
 
 interface TimelineElement {
   id: number;
@@ -16,7 +17,7 @@ interface TimelineElement {
 
 export default function Timeline() {
   return (
-    <div
+    <Box
       style={{
         position: "relative",
         padding: "20px",
@@ -25,7 +26,7 @@ export default function Timeline() {
       }}
     >
       {/* Vertical line in the center */}
-      <div
+      <Box
         style={{
           position: "absolute",
           top: "0",
@@ -35,13 +36,13 @@ export default function Timeline() {
           backgroundColor: "#3B82F6", // Light blue for the vertical line
           zIndex: 0,
         }}
-      ></div>
+      ></Box>
 
       {timelineElements.map((element: TimelineElement, index: number) => {
         const iconSrc = element.icon === "school" ? schoolIcon : workIcon;
 
         return (
-          <div
+          <Box
             key={element.id}
             style={{
               display: "flex",
@@ -53,7 +54,7 @@ export default function Timeline() {
             }}
           >
             {/* Timeline element icon and date */}
-            <div
+            <Box
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -76,7 +77,7 @@ export default function Timeline() {
               />
 
               {/* Date text */}
-              <div
+              <Box
                 style={{
                   color: "var(--deep-blue)", // Light text
                   fontSize: "0.875rem",
@@ -84,11 +85,11 @@ export default function Timeline() {
                 }}
               >
                 {element.date}
-              </div>
-            </div>
+              </Box>
+            </Box>
 
             {/* Main content block */}
-            <div
+            <Box
               style={{
                 border: "1px solid #374151", // Dark gray border
                 borderRadius: "8px",
@@ -103,26 +104,30 @@ export default function Timeline() {
               }}
             >
               {/* Title */}
-              <div style={{ fontSize: "1.25rem", fontWeight: "500" }}>
-                {element.title}
-              </div>
+              <Box style={{ fontSize: "1.25rem", fontWeight: "500" }}>
+                <Typography variant={"h5"} color="white">
+                  {element.title}
+                </Typography>
+              </Box>
 
               {/* Location */}
-              <div
+              <Box
                 style={{
                   color: "var(--light-gray)", // Light gray text for location
                   marginBottom: "16px",
                   fontSize: "0.875rem",
                 }}
               >
-                {element.location}
-              </div>
+                <Typography variant={"h6"}>{element.location}</Typography>
+              </Box>
 
               {/* Description */}
-              <div style={{ marginBottom: "16px" }}>{element.description}</div>
+              <Box style={{ marginBottom: "16px" }}>
+                <Typography color="white">{element.description}</Typography>
+              </Box>
 
               {/* Tech stack */}
-              <div
+              <Box
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
@@ -142,14 +147,14 @@ export default function Timeline() {
                       margin: "4px",
                     }}
                   >
-                    {tech}
+                    <Typography>{tech}</Typography>
                   </span>
                 ))}
-              </div>
-            </div>
-          </div>
+              </Box>
+            </Box>
+          </Box>
         );
       })}
-    </div>
+    </Box>
   );
 }

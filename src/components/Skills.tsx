@@ -88,11 +88,11 @@ function Skills() {
       <Typography variant="h2" gutterBottom>
         Skills
       </Typography>
-      <Paper style={{ padding: 16 }}>
+      <Box style={{ padding: 16 }}>
         {Object.keys(groupedSkills).map((skillType) => (
           <div key={skillType}>
             <Typography
-              color="#0d47a1"
+              color="#64b5f6"
               variant="h4"
               style={{ marginBottom: 16 }}
             >
@@ -101,7 +101,14 @@ function Skills() {
             <Grid container spacing={2}>
               {groupedSkills[skillType as SkillType].map((skill, index) => (
                 <Grid item xs={3} sm={2} md={2} lg={2} key={index}>
-                  <div style={{ textAlign: "center" }}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
                     <Box
                       style={{ fontSize: 40 }}
                       sx={{
@@ -114,14 +121,16 @@ function Skills() {
                     >
                       {skill.icon ? skill.icon : "N/A"}
                     </Box>
-                    <Typography variant="body1">{skill.name}</Typography>
+                    <Typography variant="body1" style={{ marginTop: 8 }}>
+                      {skill.name}
+                    </Typography>
                   </div>
                 </Grid>
               ))}
             </Grid>
           </div>
         ))}
-      </Paper>
+      </Box>
     </>
   );
 }

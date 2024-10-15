@@ -1,4 +1,5 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import Timeline from "./Timeline/Timeline";
 
 function About() {
   return (
@@ -24,6 +25,9 @@ function About() {
         Outside of work, I enjoy video games, home automation, 3D printing, and
         the occasional Magic: The Gathering match.
       </Typography>
+      <Box className="flex flex-col justify-center items-center bg-white-900 text-white text-base pb-8 sm:text-lg">
+        <Timeline />
+      </Box>
     </>
   );
 }

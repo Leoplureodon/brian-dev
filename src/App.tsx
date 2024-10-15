@@ -79,7 +79,23 @@ function App() {
           <Box className="about">
             <About />
           </Box>
-          <Box className="skills">
+
+          {/* :root {
+  --main-blue: #1976d2; /* Primary color 
+  --light-blue: #64b5f6; /* Light blue shade 
+  --sky-blue: #87ceeb; /* Sky blue shade 
+  --dark-blue: #0d47a1; /* Dark blue shade 
+  --deep-blue: #0a74da; /* Deep blue shade 
+  --white: #ffffff; /* Light background 
+  --dark-gray: #121212; /* Dark background 
+  --light-gray: #f5f5f5; /* Light text 
+  --accent-green: #4caf50;
+} */}
+
+          <Box
+            style={{ backgroundColor: "#0d47a1", color: "#ffffff" }}
+            className="skills"
+          >
             <Skills />
           </Box>
           <Box className="projects">

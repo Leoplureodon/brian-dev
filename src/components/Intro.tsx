@@ -7,6 +7,7 @@ import {
   Grid,
 } from "@mui/material";
 import image from "../images/avatar.webp";
+import { DownloadCV } from "./Requests";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -94,6 +95,7 @@ function Intro() {
           variant="contained"
           color="primary"
           style={{ marginBottom: "20px" }}
+          onClick={DownloadCV}
         >
           Download CV
         </Button>

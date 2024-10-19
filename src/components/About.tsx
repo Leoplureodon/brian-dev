@@ -23,7 +23,7 @@ function About() {
       <br />
       <Typography>
         Outside of work, I enjoy video games, home automation, 3D printing, and
-        the occasional Magic: The Gathering match.
+        the occasional game of Magic The Gathering.
       </Typography>
       <Box className="flex flex-col justify-center items-center bg-white-900 text-white text-base pb-8 sm:text-lg">
         <Timeline />

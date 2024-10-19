@@ -103,7 +103,7 @@ function Intro() {
           <Tooltip title="Visit my LinkedIn profile" arrow>
             <Button
               component="a"
-              href="https://www.linkedin.com/in/leoplureodon/"
+              href="https://www.linkedin.com/in/brianorourkedev"
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"

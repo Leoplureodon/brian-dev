@@ -1,5 +1,5 @@
 {
-  "homepage": "https://leoplureodon.github.io/brian-dev/",
+  "homepage": "https://brianorourke.ie",
   "name": "brian-dev",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "gh-pages-build": "vite build --base=/brian-dev/",
+    "gh-pages-build": "vite build --base=/",
     "gh-pages-deploy": "gh-pages -d dist"
   },
   "dependencies": {

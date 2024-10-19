@@ -124,7 +124,7 @@ const timelineElements = [
     description:
       "Transitioned to Full Stack, Created company-wide websites, Application Monitoring",
     buttonText: "Details",
-    date: "2022-present",
+    date: "2022-2024",
     icon: "work",
     color: "orange",
     tech: [

@@ -69,7 +69,11 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <SnackbarProvider>
+        <SnackbarProvider
+          style={{
+            fontFamily: theme.typography.fontFamily,
+          }}
+        >
           <Box className="intro">
             <Intro />
             {/* <Button variant="contained" color="primary" onClick={toggleTheme}>

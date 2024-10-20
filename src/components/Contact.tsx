@@ -93,6 +93,15 @@ function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
+              slotProps={{
+                input: {
+                  inputProps: {
+                    maxLength: 50,
+                    pattern: "[A-Za-z ]*",
+                  },
+                },
+              }}
+              helperText="Maximum 50 characters. Letters and spaces only."
             />
             <TextField
               label="Email"
@@ -110,6 +119,14 @@ function Contact() {
               multiline
               rows={4}
               required
+              slotProps={{
+                input: {
+                  inputProps: {
+                    maxLength: 1000,
+                  },
+                },
+              }}
+              helperText={`${formData.message.length}/1000 characters`}
             />
             {/* Hidden botcheck field */}
             <input

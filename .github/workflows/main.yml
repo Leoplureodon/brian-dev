@@ -19,7 +19,15 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Build project
+        env:
+          CI: false
+          VITE_BE_API_ADDRESS: ${{ secrets.VITE_BE_API_ADDRESS }}
+          VITE_EMAIL_ADDRESS: ${{ secrets.VITE_EMAIL_ADDRESS }}
+          VITE_CONTACT_FORM_API_KEY: ${{ secrets.VITE_CONTACT_FORM_API_KEY }}
         run: npm run build
+
+      - name: Add CNAME file
+        run: echo 'www.brianorourke.ie' > ./dist/CNAME
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3

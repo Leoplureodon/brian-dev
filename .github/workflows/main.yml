@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: "dist/**" # Ensure this is the correct build output path for Vite
-          name: github-pages # Ensure the artifact name is specified
+          name: github-pages # Specify the artifact name
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2

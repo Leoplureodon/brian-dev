@@ -96,12 +96,10 @@ function Contact() {
               slotProps={{
                 input: {
                   inputProps: {
-                    maxLength: 50,
-                    pattern: "[A-Za-z ]*",
+                    maxLength: 60,
                   },
                 },
               }}
-              helperText="Maximum 50 characters. Letters and spaces only."
             />
             <TextField
               label="Email"
@@ -110,6 +108,13 @@ function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
+              slotProps={{
+                input: {
+                  inputProps: {
+                    maxLength: 60,
+                  },
+                },
+              }}
             />
             <TextField
               label="Message"

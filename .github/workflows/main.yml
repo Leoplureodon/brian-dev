@@ -43,7 +43,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4 # Correct action for uploading Pages artifacts
+        uses: actions/upload-pages-artifact@v1 # Correct action for uploading Pages artifacts
         with:
           path: "./dist" # Ensure this is the correct build output path for Vite
 

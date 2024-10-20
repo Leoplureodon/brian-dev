@@ -18,7 +18,7 @@ To run the project locally:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/Leoplureodon/brian-dev.git
    ```
 
 2. Install the dependencies:
@@ -32,7 +32,7 @@ To run the project locally:
    npm run dev
    ```
 
-The site will be available at `http://localhost:3000`.
+The site will be available at `http://localhost:5173`.
 
 ## Deployment
 

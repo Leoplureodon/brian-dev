@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          path: "./dist" # Ensure this is the correct build output path for Vite
+          path: "dist/**" # Ensure this is the correct build output path for Vite
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2

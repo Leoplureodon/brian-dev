@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import {
   FaReact,
   FaHtml5,
@@ -29,8 +29,11 @@ import {
 } from "react-icons/si";
 import { AiOutlineApi, AiFillPicture } from "react-icons/ai";
 import { MdCloudSync, MdCloudDone } from "react-icons/md";
-import { LiaNode } from "react-icons/lia";
 import { GrMysql } from "react-icons/gr";
+import { TbAugmentedReality } from "react-icons/tb";
+import { BsHeadsetVr } from "react-icons/bs";
+import { FaNodeJs } from "react-icons/fa6";
+import { TiFlowChildren } from "react-icons/ti";
 
 type SkillType = "web" | "languages" | "games" | "tools";
 
@@ -51,7 +54,7 @@ const mySkills: Skill[] = [
   { skillType: "web", name: "Back End", icon: <FaCloudDownloadAlt /> },
   { skillType: "web", name: "Dev Ops", icon: <MdCloudDone /> },
   { skillType: "web", name: "CI/CD", icon: <MdCloudSync /> },
-  { skillType: "web", name: "Node JS", icon: <LiaNode /> },
+  { skillType: "web", name: "Node JS", icon: <FaNodeJs /> },
   { skillType: "languages", name: "TypeScript", icon: <SiTypescript /> },
   { skillType: "languages", name: "C#", icon: <SiCsharp /> },
   { skillType: "languages", name: "Java", icon: <FaJava /> },
@@ -60,6 +63,9 @@ const mySkills: Skill[] = [
   { skillType: "languages", name: "Batch", icon: <SiWindowsterminal /> },
   { skillType: "games", name: "Unity", icon: <SiUnity /> },
   { skillType: "games", name: "Unreal Engine", icon: <SiUnrealengine /> },
+  { skillType: "games", name: "AR", icon: <TbAugmentedReality /> },
+  { skillType: "games", name: "VR", icon: <BsHeadsetVr /> },
+  { skillType: "tools", name: "Scrum Agile", icon: <TiFlowChildren /> },
   { skillType: "tools", name: "Visual Studio", icon: <SiVisualstudiocode /> },
   { skillType: "tools", name: "Azure Dev Ops", icon: <SiAzuredevops /> },
   { skillType: "tools", name: "PostgreSQL", icon: <SiPostgresql /> },

@@ -1,3 +1,4 @@
+import type { ReactElement } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import {
   FaReact,
@@ -12,15 +13,12 @@ import {
   FaCloudDownloadAlt,
   FaGooglePlay,
   FaAppStore,
+  FaTerminal,
 } from "react-icons/fa";
 import {
   SiVite,
   SiTypescript,
-  SiWindowsterminal,
   SiUnrealengine,
-  SiVisualstudiocode,
-  SiAzuredevops,
-  SiCsharp,
   SiJavascript,
   SiPostgresql,
   SiUnity,
@@ -30,17 +28,19 @@ import {
 import { AiOutlineApi, AiFillPicture } from "react-icons/ai";
 import { MdCloudSync, MdCloudDone } from "react-icons/md";
 import { GrMysql } from "react-icons/gr";
-import { TbAugmentedReality } from "react-icons/tb";
+import { TbAugmentedReality, TbBrandCSharp } from "react-icons/tb";
 import { BsHeadsetVr } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa6";
 import { TiFlowChildren } from "react-icons/ti";
+import { BiLogoVisualStudio } from "react-icons/bi";
+import { VscAzureDevops } from "react-icons/vsc";
 
 type SkillType = "web" | "languages" | "games" | "tools";
 
 interface Skill {
   skillType: SkillType;
   name: string;
-  icon: JSX.Element;
+  icon: ReactElement;
 }
 
 const mySkills: Skill[] = [
@@ -56,18 +56,18 @@ const mySkills: Skill[] = [
   { skillType: "web", name: "CI/CD", icon: <MdCloudSync /> },
   { skillType: "web", name: "Node JS", icon: <FaNodeJs /> },
   { skillType: "languages", name: "TypeScript", icon: <SiTypescript /> },
-  { skillType: "languages", name: "C#", icon: <SiCsharp /> },
+  { skillType: "languages", name: "C#", icon: <TbBrandCSharp /> },
   { skillType: "languages", name: "Java", icon: <FaJava /> },
   { skillType: "languages", name: "JavaScript", icon: <SiJavascript /> },
   { skillType: "languages", name: "Python", icon: <FaPython /> },
-  { skillType: "languages", name: "Batch", icon: <SiWindowsterminal /> },
+  { skillType: "languages", name: "Batch", icon: <FaTerminal /> },
   { skillType: "games", name: "Unity", icon: <SiUnity /> },
   { skillType: "games", name: "Unreal Engine", icon: <SiUnrealengine /> },
   { skillType: "games", name: "AR", icon: <TbAugmentedReality /> },
   { skillType: "games", name: "VR", icon: <BsHeadsetVr /> },
   { skillType: "tools", name: "Scrum Agile", icon: <TiFlowChildren /> },
-  { skillType: "tools", name: "Visual Studio", icon: <SiVisualstudiocode /> },
-  { skillType: "tools", name: "Azure Dev Ops", icon: <SiAzuredevops /> },
+  { skillType: "tools", name: "Visual Studio", icon: <BiLogoVisualStudio /> },
+  { skillType: "tools", name: "Azure Dev Ops", icon: <VscAzureDevops /> },
   { skillType: "tools", name: "PostgreSQL", icon: <SiPostgresql /> },
   { skillType: "tools", name: "MySQL", icon: <GrMysql /> },
   { skillType: "tools", name: "Git", icon: <FaGitAlt /> },

@@ -161,7 +161,7 @@ const timelineElements = [
     title: "Front End Game Developer",
     location: "Phantom Arc Studio, Dublin, Ireland",
     description:
-      "Frontend architecture and development for an unreleased Unity-based game, focusing on scalable UI, live content delivery, and cross-team collaboration in an Agile environment.",
+      "Frontend framework development for an unreleased Unity game. Scalable UI, content delivery, and Agile collaboration.",
     buttonText: "Details",
     date: "2025-2025",
     icon: "work",

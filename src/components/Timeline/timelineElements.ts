@@ -158,7 +158,7 @@ const timelineElements = [
   },
   {
     id: 9,
-    title: "Senior Frontend Developer",
+    title: "Front End Game Developer",
     location: "Phantom Arc Studio, Dublin, Ireland",
     description:
       "Frontend architecture and development for an unreleased Unity-based game, focusing on scalable UI, live content delivery, and cross-team collaboration in an Agile environment.",
@@ -169,19 +169,17 @@ const timelineElements = [
     tech: [
       "Unity",
       "R3 Reactive",
-      "Unity Addressables",
-      "Frontend Architecture",
+      "Addressables",
       "Framework Development",
-      "Live Content Delivery",
-      "Game Design Collaboration",
+      "Content Delivery",
       "Agile",
       "Localization",
       "C#",
+      "JSON",
       "GitLab",
       "Jira",
       "Git",
       "Docker",
-      "JSON",
     ],
   },
 ];

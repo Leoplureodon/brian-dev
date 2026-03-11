@@ -23,8 +23,8 @@ import {
   SiPostgresql,
   SiUnity,
   SiCsswizardry,
-  SiAdobephotoshop,
 } from "react-icons/si";
+import { DiPhotoshop } from "react-icons/di";
 import { AiOutlineApi, AiFillPicture } from "react-icons/ai";
 import { MdCloudSync, MdCloudDone } from "react-icons/md";
 import { GrMysql } from "react-icons/gr";
@@ -76,7 +76,7 @@ const mySkills: Skill[] = [
   { skillType: "tools", name: "Docker", icon: <FaDocker /> },
   { skillType: "tools", name: "App Store", icon: <FaAppStore /> },
   { skillType: "tools", name: "Play Store", icon: <FaGooglePlay /> },
-  { skillType: "tools", name: "Photoshop", icon: <SiAdobephotoshop /> },
+  { skillType: "tools", name: "Photoshop", icon: <DiPhotoshop /> },
 ];
 
 const groupedSkills = mySkills.reduce(
@@ -85,7 +85,7 @@ const groupedSkills = mySkills.reduce(
     acc[skill.skillType].push(skill);
     return acc;
   },
-  { web: [], languages: [], games: [], tools: [] }
+  { web: [], languages: [], games: [], tools: [] },
 );
 
 function Skills() {

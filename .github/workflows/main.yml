@@ -14,6 +14,7 @@ jobs:
         uses: bahmutov/npm-install@v1
       - name: Build project
         env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           CI: false
           VITE_BE_API_ADDRESS: ${{ secrets.VITE_BE_API_ADDRESS }}
           VITE_EMAIL_ADDRESS: ${{ secrets.VITE_EMAIL_ADDRESS }}
@@ -30,6 +31,8 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Download artifact

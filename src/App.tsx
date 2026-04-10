@@ -9,12 +9,9 @@ import "./App.css";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
-  // Toasts
-
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Function to get CSS variable value
@@ -60,12 +57,6 @@ function App() {
     },
   });
 
-  const toggleTheme = () => {
-    setIsDarkMode((prev) => !prev);
-    document.body.classList.toggle("dark-mode");
-    document.body.classList.toggle("light-mode");
-  };
-
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -76,34 +67,15 @@ function App() {
         >
           <Box className="intro">
             <Intro />
-            {/* <Button variant="contained" color="primary" onClick={toggleTheme}>
-            Toggle Theme
-          </Button> */}
           </Box>
           <Box className="about">
             <About />
           </Box>
-
-          {/* :root {
-  --main-blue: #1976d2; /* Primary color 
-  --light-blue: #64b5f6; /* Light blue shade 
-  --sky-blue: #87ceeb; /* Sky blue shade 
-  --dark-blue: #0d47a1; /* Dark blue shade 
-  --deep-blue: #0a74da; /* Deep blue shade 
-  --white: #ffffff; /* Light background 
-  --dark-gray: #121212; /* Dark background 
-  --light-gray: #f5f5f5; /* Light text 
-  --accent-green: #4caf50;
-} */}
-
           <Box
             style={{ backgroundColor: "#0d47a1", color: "#ffffff" }}
             className="skills"
           >
             <Skills />
-          </Box>
-          <Box className="projects">
-            <Projects />
           </Box>
           <Box className="contact">
             <Contact />

@@ -106,7 +106,7 @@ function Skills() {
             </Typography>
             <Grid container spacing={2}>
               {groupedSkills[skillType as SkillType].map((skill, index) => (
-                <Grid item xs={3} sm={2} md={2} lg={2} key={index}>
+                <Grid size={{ xs: 3, sm: 2, md: 2, lg: 2 }} key={index}>
                   <div
                     style={{
                       textAlign: "center",
@@ -116,7 +116,6 @@ function Skills() {
                     }}
                   >
                     <Box
-                      style={{ fontSize: 40 }}
                       sx={{
                         fontSize: 40,
                         transition: "transform 0.3s ease",
@@ -125,9 +124,9 @@ function Skills() {
                         },
                       }}
                     >
-                      {skill.icon ? skill.icon : "N/A"}
+                      {skill.icon ?? "N/A"}
                     </Box>
-                    <Typography variant="body1" style={{ marginTop: 8 }}>
+                    <Typography variant="body1" sx={{ mt: 1 }}>
                       {skill.name}
                     </Typography>
                   </div>

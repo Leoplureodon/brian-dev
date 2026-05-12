@@ -1,6 +1,6 @@
 // Functionality
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 // MUI
 import { Box } from "@mui/material";
@@ -68,20 +68,12 @@ function App() {
           fontFamily: theme.typography.fontFamily,
         }}
       >
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-
-            <Route
-              path="/portfolio"
-              element={
-                <Box className="portfolio">
-                  <Portfolio />
-                </Box>
-              }
-            />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </SnackbarProvider>
     </ThemeProvider>
   );

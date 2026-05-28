@@ -6,7 +6,7 @@ import {
   Button,
   Grid,
 } from "@mui/material";
-import image from "../images/avatar.webp";
+import image from "../images/avatar.png";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";

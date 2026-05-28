@@ -5,7 +5,8 @@ const timelineElements = [
     location: "Worldsites Ireland, Offaly, Ireland",
     description: "Leaving Cert Work Experience",
     buttonText: "Details",
-    date: "2009-2009",
+    startDate: "2009-05-04",
+    endDate: "2009-08-28",
     icon: "work",
     color: "blue",
     tech: ["HTML", "Wordpress"],
@@ -16,7 +17,8 @@ const timelineElements = [
     location: "BCFE, Dublin, Ireland",
     description: "Completed a BTEC HND in Computer Games Design",
     buttonText: "Details",
-    date: "2010-2013",
+    startDate: "2010-09-13",
+    endDate: "2013-05-09",
     icon: "school",
     color: "blue",
     tech: ["JavaScript", "HTML", "Java", "Unity", "C#", "3D Modelling"],
@@ -28,7 +30,8 @@ const timelineElements = [
     description:
       "Got industry experience, guidance by industry leaders, Hands-on experience with new engines",
     buttonText: "Details",
-    date: "2013-2014",
+    startDate: "2013-06-10",
+    endDate: "2014-01-30",
     icon: "work",
     color: "purple",
     tech: ["C#", "Lua", "Perforce", "Agile", "App Development"],
@@ -40,7 +43,8 @@ const timelineElements = [
     description:
       "Designed and developed games, Integrated APIs, Website Development",
     buttonText: "Details",
-    date: "2014-2015",
+    startDate: "2014-01-30",
+    endDate: "2015-06-01",
     icon: "work",
     color: "yellow",
     tech: [
@@ -61,7 +65,8 @@ const timelineElements = [
     location: "TUD, Dublin, Ireland",
     description: "Completed a course in Digital Media & Web Design",
     buttonText: "Details",
-    date: "2015-2016",
+    startDate: "2015-06-01",
+    endDate: "2016-02-01",
     icon: "school",
     color: "orange",
     tech: ["JavaScript", "HTML", "CSS", "Photoshop", "Wordpress"],
@@ -72,7 +77,8 @@ const timelineElements = [
     location: "Leoplureodon, Dublin, Ireland",
     description: "Released 2 sucessful apps, over 30,000 installs",
     buttonText: "Details",
-    date: "2016-2017",
+    startDate: "2016-02-01",
+    endDate: "2017-10-23",
     icon: "work",
     color: "red",
     tech: [
@@ -94,7 +100,8 @@ const timelineElements = [
     description:
       "Led projects, Created Visualizations, Online/Offline Vehicle Configurators, Interactive Experiences, Optimised Workflows",
     buttonText: "Details",
-    date: "2017-2023",
+    startDate: "2017-10-23",
+    endDate: "2023-11-03",
     icon: "work",
     color: "orange",
     tech: [
@@ -128,7 +135,8 @@ const timelineElements = [
     description:
       "Transitioned to Full Stack, Created company-wide websites, Application Monitoring",
     buttonText: "Details",
-    date: "2023-2024",
+    startDate: "2023-11-03",
+    endDate: "2024-10-04",
     icon: "work",
     color: "orange",
     tech: [
@@ -163,7 +171,8 @@ const timelineElements = [
     description:
       "Frontend framework development for an unreleased Unity game. Scalable UI, content delivery, and Agile collaboration.",
     buttonText: "Details",
-    date: "2025-2025",
+    startDate: "2025-01-01",
+    endDate: "2025-07-16",
     icon: "work",
     color: "orange",
     tech: [

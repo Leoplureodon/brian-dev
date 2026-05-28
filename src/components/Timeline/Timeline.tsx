@@ -1,11 +1,12 @@
 import timelineElements from "./timelineElements";
 import schoolIcon from "../../assets/school.svg";
 import workIcon from "../../assets/work.svg";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Tooltip } from "@mui/material";
 
 interface TimelineElement {
   id: number;
-  date: string;
+  startDate: string; // ISO date format: YYYY-MM-DD
+  endDate: string; // ISO date format: YYYY-MM-DD
   color: string; // This will still be used to apply specific colors if necessary
   icon: string;
   title: string;
@@ -14,6 +15,41 @@ interface TimelineElement {
   tech: string[];
   buttonText: string;
 }
+
+// Format ISO start/end date strings to just year
+const formatYearRange = (startDate: string, endDate: string) => {
+  const startYear = new Date(startDate).getFullYear();
+  const endYear = new Date(endDate).getFullYear();
+
+  return `${startYear} - ${endYear}`;
+};
+
+// Calculate duration between two ISO date strings and format as "X years Y months"
+export const formatDuration = (startDate: string, endDate: string) => {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+
+  // adjust if month diff is negative
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  const parts: string[] = [];
+
+  if (years > 0) {
+    parts.push(`${years} year${years !== 1 ? "s" : ""}`);
+  }
+
+  if (months > 0) {
+    parts.push(`${months} month${months !== 1 ? "s" : ""}`);
+  }
+
+  return parts.length ? parts.join(" ") : "0 months";
+};
 
 export default function Timeline() {
   return (
@@ -77,15 +113,22 @@ export default function Timeline() {
               />
 
               {/* Date text */}
-              <Box
-                style={{
-                  color: "var(--deep-blue)", // Light text
-                  fontSize: "0.875rem",
-                  textAlign: index % 2 === 1 ? "left" : "right", // Text alignment
-                }}
+              <Tooltip
+                title={formatDuration(element.startDate, element.endDate)}
+                arrow
               >
-                <Typography variant="h5">{element.date}</Typography>
-              </Box>
+                <Box
+                  style={{
+                    color: "var(--deep-blue)", // Light text
+                    fontSize: "0.875rem",
+                    textAlign: index % 2 === 1 ? "left" : "right", // Text alignment
+                  }}
+                >
+                  <Typography variant="h5">
+                    {formatYearRange(element.startDate, element.endDate)}
+                  </Typography>
+                </Box>
+              </Tooltip>
             </Box>
 
             {/* Main content block */}

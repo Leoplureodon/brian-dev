@@ -28,7 +28,7 @@ const timelineElements = [
     title: "Game Developer",
     location: "Riot Games and Havok, Dublin, Ireland",
     description:
-      "Got industry experience, guidance by industry leaders, Hands-on experience with new engines",
+      "Gained industry experience, guidance by industry leaders, Hands-on experience with new engines",
     buttonText: "Details",
     startDate: "2013-06-10",
     endDate: "2014-01-30",

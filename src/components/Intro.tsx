@@ -24,17 +24,18 @@ function Intro() {
   return (
     <Grid
       container
+      direction="row"
       spacing={2}
-      alignItems="center"
-      justifyContent="center"
-      style={{ padding: "20px", textAlign: "center", minHeight: "70vh" }}
+      sx={{
+        padding: "20px",
+        textAlign: "center",
+        minHeight: "70vh",
+      }}
     >
       {/* Avatar section */}
       <Grid
-        item
-        xs={12}
-        sm={6}
-        style={{
+        size={{ xs: 12, md: 6 }}
+        sx={{
           display: "flex",
           justifyContent: "center",
           marginBottom: "10px", // Reduce margin for mobile
@@ -51,13 +52,13 @@ function Intro() {
       </Grid>
 
       {/* Text section */}
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Typography
           variant="h1"
           sx={{
-            marginBottom: { xs: "5px", sm: "10px" }, // Adjust for mobile
-            fontSize: { xs: "2rem", sm: "5rem" },
-            lineHeight: { xs: 1.2, sm: 1.1 },
+            maxWidth: "100%",
+            overflowWrap: "normal",
+            fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
           }}
         >
           Brian O'Rourke
@@ -66,7 +67,7 @@ function Intro() {
           variant="h3"
           sx={{
             marginBottom: { xs: "5px", sm: "10px" }, // Adjust for mobile
-            fontSize: { xs: "1.5rem", sm: "2rem" },
+            fontSize: { xs: "1.5rem", sm: "1.5rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
         >
@@ -76,7 +77,7 @@ function Intro() {
           variant="h4"
           sx={{
             marginBottom: { xs: "15px", sm: "20px" }, // Adjust for mobile
-            fontSize: { xs: "1.2rem", sm: "1.5rem" },
+            fontSize: { xs: "1.2rem", sm: "1.25rem" },
             lineHeight: { xs: 1.2, sm: 1.1 },
           }}
         >
@@ -85,7 +86,7 @@ function Intro() {
         <Typography
           sx={{
             marginBottom: "20px",
-            fontSize: { xs: "0.875rem", sm: "1rem" },
+            fontSize: { xs: "0.7rem", sm: "1rem" },
             lineHeight: { xs: 1.5, sm: 1.5 },
           }}
         >
@@ -95,7 +96,7 @@ function Intro() {
         <Button
           variant="contained"
           color="primary"
-          style={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px" }}
           component="a"
           href={cvURL}
           download="Brian-ORourke-CV.pdf"
@@ -104,7 +105,7 @@ function Intro() {
         </Button>
         <br />
         <br />
-        <ButtonGroup style={{ marginBottom: "20px" }}>
+        <ButtonGroup sx={{ marginBottom: "20px" }}>
           <Tooltip title="Visit my LinkedIn profile" arrow>
             <Button
               component="a"
@@ -140,7 +141,7 @@ function Intro() {
           </Tooltip>
         </ButtonGroup>
         <Button
-          style={{
+          sx={{
             position: "absolute",
             bottom: "50px", // Keeps it at the bottom of the page
             left: "50%",

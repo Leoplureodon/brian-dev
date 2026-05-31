@@ -29,14 +29,17 @@ export const formatDuration = (startDate: string, endDate: string) => {
   const start = new Date(startDate);
   const end = new Date(endDate);
 
-  let years = end.getFullYear() - start.getFullYear();
-  let months = end.getMonth() - start.getMonth();
+  let totalMonths =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth());
 
-  // adjust if month diff is negative
-  if (months < 0) {
-    years -= 1;
-    months += 12;
+  // if there are leftover days, round up
+  if (end.getDate() >= start.getDate()) {
+    totalMonths += 1;
   }
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
 
   const parts: string[] = [];
 

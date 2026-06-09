@@ -53,7 +53,7 @@ const timelineElements = [
   },
   {
     id: 5,
-    title: "Computer Games Design Student",
+    title: "Web Development Student",
     location: "TUD, Dublin, Ireland",
     description:
       "Expanded web development and digital media skills through practical design and front-end development projects.",
